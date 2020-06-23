@@ -2,8 +2,8 @@ $( document ).ready( function(e){
 
   !(function(d){
 // Variables to target our base class,  get carousel items, count how many carousel items there are, set the slide to 0 (which is the number that tells us the frame we're on), and set motion to true which disables interactivity.
-var itemClassName = "carousel__photo";
-    items = d.getElementsByClassName(itemClassName),
+var itemClassName = "testimo-slide";
+    var items = $('.'+itemClassName),
     totalItems = items.length,
     slide = 0,
     moving = true;
