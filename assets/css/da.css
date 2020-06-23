@@ -46,13 +46,18 @@ a {
     display: block;
     width: 100%;
   }
-  .wrapper-title h1{
+  .wrapper-padding {
+    padding: 60px 70px;
+  }
+  .wrapper-title h1 {
   	font-family: pb;
   	text-align: center;
   	color: #000;
   	margin: 0;
-    text-transform: capitalize;
+  	text-transform: capitalize;
   	/* font-size: 35px; */
+  	max-width: 80%;
+  	margin: auto;
   }
   a.da_link {
     font-family: pm;
@@ -73,7 +78,6 @@ a {
   	display: block;
   	width: 100%;
   	margin: 30px auto;
-  	padding: 60px 70px;
   	background: #fff;
   }
   .consult-inr {
@@ -120,9 +124,7 @@ a {
   	background-color: rgba(255,255,255,0.6);
   }
   .services-title > h2 {}
-  .all-services.wrapper {
-  	padding: 60px 70px;
-  }
+  .all-services.wrapper {}
   .services-row {
   	position: relative;
   	width: 100%;
@@ -174,10 +176,7 @@ a {
     margin: 10px auto;
     text-align: center;
   }
-  .all-values {
-  	padding: 50px 70px;
-    position: relative;
-  }
+  .all-values {}
   .values-row {
   	position: relative;
   	width: 100%;
@@ -215,12 +214,7 @@ a {
   .wrap-our-work.wrapper {}
   .our-work-inr {}
   .work-title > h2 {}
-  .all-work.wrapper {
-  	padding: 60px 70px;
-  }
-  .all-work.wrapper {
-    padding: 60px 70px;
-  }
+  .all-work.wrapper {}
   .wf-row {
     position: relative;
     width: 100%;
@@ -338,11 +332,7 @@ a {
   /* OUR WORK ENDS */
 
   /* CONTACT */
-  .wrap-contact-form {
-    position: relative;
-    display: block;
-    padding: 60px 70px;
-  }
+  .wrap-contact-form {}
   .contact-row {
     position: relative;
     width: 100%;
@@ -418,10 +408,8 @@ a {
   /* CONTACT */
 
   /* TESTIMONIALS */
-
   .carousel-wrapper {
     overflow: hidden;
-    /* width: 90%; */
     margin: auto;
   }
   .carousel-wrapper * {
@@ -440,8 +428,6 @@ a {
     position: absolute;
     top:0;
     width: 30%;
-    /* margin: auto; */
-    /* padding: 1rem 4rem; */
     z-index: 100;
     transition: transform .5s, opacity .5s, z-index .5s;
   }
@@ -496,14 +482,7 @@ a {
     left: 47%;
     transform: translate(-50%, -50%) rotate(-45deg);
   }
-
-
-  .all-testimo {
-  	position: relative;
-  	display: block;
-  	width: 100%;
-  	padding: 60px 70px;
-  }
+  .all-testimo {}
   .testimo-slider {
   	position: relative;
   	width: 100%;
@@ -573,12 +552,7 @@ a {
   /* TESTIMONIALS */
 
   /* BLOGS */
-  .all-blogs {
-    position: relative;
-    display: block;
-    width: 100%;
-    padding: 60px 70px;
-  }
+  .all-blogs {}
   .blogs-row {
     position: relative;
     width: 100%;
@@ -728,7 +702,78 @@ a {
 */
 
 @media (min-width: 768px) and (max-width: 1024px) {
+  .wrapper-padding {
+    padding: 20px;
+  }
+  .wrapper-title h1 {
+  	font-size: 30px;
+  }
+  p {
+    font-size: 14px !important;
+  }
+  /* CONSULTATION */
+  .consult-title > h3 {
+  	font-size: 18px;
+  }
+  .consult-mail > a, .consult-phone > a {
+  	padding: 10px 20px;
+  }
+  /* CONSULTATION */
 
+  /* SERVICES */
+  .wrap-services.wrapper {
+  	background-size: 60%;
+  	background-position-x: 130%;
+  	background-position-y: 50%;
+  }
+  .services-row {
+  	padding: 0;
+  }
+  /* SERVICES */
+
+  /* VALUES */
+  .values-top > p {
+  	width: 90%;
+  }
+  .value-title {
+  	margin-bottom: 120px;
+  }
+  .svg-wave {
+  	top: 35%;
+  	transform: translateY(-35%);
+  }
+  /* VALUES */
+
+  /* OUR WORK */
+  .pc-title h2 {
+  	font-size: 25px;
+  }
+  .pc-subtitle h3 {
+  	font-size: 18px;
+  }
+  /* OUR WORK */
+
+  /* CONTACT */
+  .contact-row {
+  	padding: 30px 0;
+  	justify-content: space-around;
+  }
+  /* CONTACT */
+
+  /* BLOGS */
+  .blogs-title.wrapper-title {
+  	margin: 20px 0;
+  }
+  /* BLOGS */
+
+  /* FOOTER */
+  .da-footer-row {
+  	padding: 40px 0;
+  }
+  .da-footer-row > .da-footer-col {
+  	margin: 0 10px;
+  }
+  /* FOOTER */
 }
 
 /*
@@ -736,11 +781,7 @@ a {
   ##Screen = B/w 768px to 1024px
 */
 
-@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-
-  //CSS
-
-}
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {}
 
 /*
   ##Device = Low Resolution Tablets, Mobiles (Landscape)
@@ -748,9 +789,129 @@ a {
 */
 
 @media (min-width: 481px) and (max-width: 767px) {
+  .wrapper-padding {
+  	padding: 10px;
+  }
+  .wrapper-title h1 {
+  	font-size: 30px;
+  }
+  p {
+    font-size: 14px !important;
+  }
+  /* CONSULTATION */
+  .consult-inr {
+  	flex-flow: column wrap;
+  }
+  .consult-inr > div {
+  	position: relative;
+  	display: inline-block;
+  	margin: 25px auto;
+  }
+  .consult-mail > a, .consult-phone > a {
+  	font-size: 14px;
+  	padding: 10px 15px;
+  }
+  /* CONSULTATION */
 
-  //CSS
+  /* SERVICES */
+  .services-row {
+  	padding: 0;
+  }
+  /* SERVICES */
 
+  /* VALUES */
+  .values-top > p {
+  	width: 90%;
+  	line-height: 2;
+  }
+  .value-title {
+  	margin-bottom: 70px;
+  }
+  .svg-wave {
+  	top: 30%;
+  	transform: translateY(-30%);
+  }
+  /* VALUES */
+
+  /* WORK */
+  .wf-row {
+  	height: auto;
+  	flex-flow: column;
+  }
+  .wf-col.wf-col-cnt {
+  	width: 100%;
+  	padding: 20px;
+  }
+  .wf-col.wf-col-img {
+  	width: 100%;
+  	height: 100%;
+  }
+  .pc-title h2 {
+  	font-size: 25px;
+  }
+  .pc-subtitle h3 {
+  	font-size: 18px;
+  }
+  /* WORK */
+
+  /* CONTACT */
+  .contact-row {
+  	padding: 0;
+  	justify-content: space-around;
+    margin: 30px 0;
+  }
+  .contact-col.col-cont-logo {
+  	width: 33%;
+  }
+  .contact-col.col-cont-form {
+  	padding: 15px;
+  	width: 65%;
+  }
+  .cont-btn .form-btn {
+  	padding: 10px;
+  	width: 100%;
+  }
+  /* CONTACT */
+
+  /* TESTIMONIALS */
+  .carousel-wrapper {
+  	margin: 30px 0;
+  }
+  .testimo-slide {
+  	width: 50%;
+  }
+  /* TESTIMONIALS */
+
+  /* BLOGS */
+  .blogs-row {
+  	margin: 30px 0;
+  }
+  .date-pub {
+  	width: 60px;
+  	height: 60px;
+  	top: -30px;
+  	left: 50%;
+  	font-size: 14px;
+  	transform: translateX(-50%);
+  }
+  .blog-cont > .blog-link {
+  	padding: 5px 10px;
+  	font-size: 14px;
+  }
+  /* BLOGS */
+
+  /* FOOTER */
+  .da-footer-row {
+  	display: block;
+  	padding: 30px 10px;
+  }
+  .da-footer-row > .da-footer-col {
+  	width: 30%;
+  	display: inline-block;
+  	margin: 10px 5px;
+  	vertical-align: top;
+  }
+  /* FOOTER */
 }
 
 /*
@@ -758,8 +919,4 @@ a {
   ##Screen = B/w 320px to 479px
 */
 
-@media (min-width: 320px) and (max-width: 480px) {
-
-  //CSS
-
-}
+@media (min-width: 320px) and (max-width: 480px) {}
