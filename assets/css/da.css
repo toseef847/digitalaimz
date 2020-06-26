@@ -207,6 +207,10 @@ a {
     top: 45%;
     transform: translateY(-45%);
     left: 0;
+    width: 100%;
+  }
+  #svg-wave > svg {
+  	width: 100vw;
   }
   /* VALUES ENDS */
 

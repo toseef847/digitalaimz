@@ -13,19 +13,19 @@ function setInitialClasses() {
 
   // Target the last, initial, and next items and give them the relevant class.
   // This assumes there are three or more items.
-  items[totalItems - 1].classList.add("prev");
-  items[0].classList.add("active");
-  items[1].classList.add("next");
+  $(items[totalItems - 1]).addClass("prev");
+  $(items[0]).addClass("active");
+  $(items[1]).addClass("next");
 }
 
 // Set click events to navigation buttons
 
 function setEventListeners() {
-  var next = d.getElementsByClassName('carousel__button--next')[0],
-      prev = d.getElementsByClassName('carousel__button--prev')[0];
+  var next = $('.carousel__button--next')[0],
+      prev = $('.carousel__button--prev')[0];
 
-  next.addEventListener('click', moveNext);
-  prev.addEventListener('click', movePrev);
+  $(next).click(function(e){moveNext()});
+  $(prev).click(function(e){movePrev()});
 }
 
 // Disable interaction by setting 'moving' to true for the same duration as our transition (0.5s = 500ms)
@@ -135,5 +135,50 @@ function initCarousel() {
 initCarousel();
 
 }(document));
+
+// SVG wave animation
+  var tl = gsap.timeline({transformOrigin: '50% 50%'});
+
+  $('#Layer_1').mouseenter(function(e){
+    tl.to('#cir1',{
+      duration: 2,
+      stagger: 1,
+      motionPath:{
+        path: "#fullwave",
+        align: "#fullwave",
+        end: 0.4,
+        ease: 'none',
+        autoRotate: true,
+        alignOrigin: [0.5, 0.5]
+      },
+    }).to('#cir2',{
+      duration: 1.5,
+      stagger: 1,
+      delay: -1.5,
+      motionPath:{
+        path: "#fullwave",
+        align: "#fullwave",
+        end: 0.275,
+        ease: 'none',
+        autoRotate: true,
+        alignOrigin: [0.5, 0.5]
+      },
+    }).to('#cir3',{
+      duration: 1,
+      stagger: 1,
+      delay: -1,
+      motionPath:{
+        path: "#fullwave",
+        align: "#fullwave",
+        end: 0.15,
+        ease: 'none',
+        autoRotate: true,
+        alignOrigin: [0.5, 0.5]
+      },onComplete: tweenComplete
+    });
+    function tweenComplete() {
+      tl.fromTo('circle', 1, {x: 0,y:0, scale: 2,transformOrigin: '50% 50%'}, {scale: 1})
+    }
+  });
 
 } ); //DOM content loaded
